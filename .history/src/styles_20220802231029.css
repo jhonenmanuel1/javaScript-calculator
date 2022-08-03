@@ -1,0 +1,21 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+body{
+    margin: 0;
+    background-color: #224870;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #00916e};
+
+}
