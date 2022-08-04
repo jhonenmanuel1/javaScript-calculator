@@ -1,0 +1,1 @@
+const displayLastValue = document.getElementById("last-value")

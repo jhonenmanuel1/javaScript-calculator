@@ -3,9 +3,9 @@ const displayActualValue = document.getElementById("actual-value");
 const numbersButtons  = document.querySelectorAll("number");
 const operatorButtons = document.querySelectorAll("operator");
 
-const display = new Display(displayLastValue, displayActualValue);
-numbersButtons.forEach(b =>{
-    b.addEventListener('click', ()=>{
-        display.addNumber(b.innerHTML);
-    });
-});
+
+const calculator = new Calculator();
+console.log(calculator.sumar());
+console.log(calculator.restar());
+console.log(calculator.multiplicar());
+console.log(calculator.dividir());
