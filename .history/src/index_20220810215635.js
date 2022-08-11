@@ -12,5 +12,5 @@ numberButtons.forEach(boton =>
     })
     );
 operatorButtons.forEach(b =>
-    b.addEventListener('click', ()=> display.computar(b.value))
+    b.addEventListener('click', ()=> display.computar())
     )

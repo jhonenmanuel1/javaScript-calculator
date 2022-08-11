@@ -31,8 +31,8 @@ class Display {
         this.displayLastValue.textContent = this.lastValue
     }
     computar(tipo){
-        this.operatorType !=="igual" && this.calc();
-        this.operatorType = tipo;
+        this.tipoOperation !=="igual" && this.calc();
+        this.tipoOperation = tipo;
 
     }
     calc(){

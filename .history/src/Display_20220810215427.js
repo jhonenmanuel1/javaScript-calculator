@@ -30,11 +30,6 @@ class Display {
         this.displayActualValue.textContent = this.actualValue;
         this.displayLastValue.textContent = this.lastValue
     }
-    computar(tipo){
-        this.operatorType !=="igual" && this.calc();
-        this.operatorType = tipo;
-
-    }
     calc(){
         const lastValue  = parseFloat(this.lastValue);
         const actualValue = parseFloat(this.actualValue);

@@ -11,6 +11,3 @@ numberButtons.forEach(boton =>
         display.addNumber(boton.innerHTML)
     })
     );
-operatorButtons.forEach(b =>
-    b.addEventListener('click', ()=> display.computar(b.value))
-    )

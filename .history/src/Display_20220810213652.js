@@ -2,7 +2,6 @@ class Display {
     constructor(displayLastValue,displayActualValue ){
         this.displayActualValue = displayActualValue;
         this.displayLastValue = displayLastValue;
-        this.operatorType = undefined;
         this.calculator = new Calculator();
         this.actualValue = ``;
         this.lastValue =``;
@@ -10,14 +9,13 @@ class Display {
 
     }
     borrar (){
-        this.actualValue = this.actualValue.slice(0,-1);
+        this.actualValue = this.actualValue.slice(0,-1)
         this.printValues();
         
     }
     borrarTodo(){
         this.actualValue = '';
         this.lastValue = '';
-        this.operatorType = undefined;
         this.printValues();
     }
     addNumber(num){
@@ -29,17 +27,5 @@ class Display {
     printValues(){
         this.displayActualValue.textContent = this.actualValue;
         this.displayLastValue.textContent = this.lastValue
-    }
-    computar(tipo){
-        this.operatorType !=="igual" && this.calc();
-        this.operatorType = tipo;
-
-    }
-    calc(){
-        const lastValue  = parseFloat(this.lastValue);
-        const actualValue = parseFloat(this.actualValue);
-
-        if ( isNaN(actualValue) || isNaN(lastValue)) return
-        this.actualValue = this.calculator[this.operatorType](lastValue,actualValue);
     }
 }

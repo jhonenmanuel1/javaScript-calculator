@@ -8,9 +8,6 @@ const display = new Display(displayLastValue,  displayActualValue);
 
 numberButtons.forEach(boton =>
     boton.addEventListener('click', ()=>{
-        display.addNumber(boton.innerHTML)
-    })
-    );
-operatorButtons.forEach(b =>
-    b.addEventListener('click', ()=> display.computar(b.value))
+
+    });
     )

@@ -10,14 +10,13 @@ class Display {
 
     }
     borrar (){
-        this.actualValue = this.actualValue.slice(0,-1);
+        this.actualValue = this.actualValue.slice(0,-1)
         this.printValues();
         
     }
     borrarTodo(){
         this.actualValue = '';
         this.lastValue = '';
-        this.operatorType = undefined;
         this.printValues();
     }
     addNumber(num){
@@ -29,17 +28,5 @@ class Display {
     printValues(){
         this.displayActualValue.textContent = this.actualValue;
         this.displayLastValue.textContent = this.lastValue
-    }
-    computar(tipo){
-        this.operatorType !=="igual" && this.calc();
-        this.operatorType = tipo;
-
-    }
-    calc(){
-        const lastValue  = parseFloat(this.lastValue);
-        const actualValue = parseFloat(this.actualValue);
-
-        if ( isNaN(actualValue) || isNaN(lastValue)) return
-        this.actualValue = this.calculator[this.operatorType](lastValue,actualValue);
     }
 }
