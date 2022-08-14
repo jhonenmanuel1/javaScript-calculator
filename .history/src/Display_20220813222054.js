@@ -6,12 +6,6 @@ class Display {
         this.calculator = new Calculator();
         this.actualValue = ``;
         this.lastValue =``;
-        this.signos ={
-            sum:'+',
-            res:'-',
-            mul:'*',
-            div:'/'           
-        }
 
 
     }
@@ -30,9 +24,6 @@ class Display {
         this.operatorType !== 'igual' && this.calc();
         this.operatorType = tipo;
         this.lastValue = this.actualValue || this.lastValue;
-        this.actualValue = '';
-        this.printValues();
-        console.log('si ta funcionando');
 
 
     }
@@ -45,10 +36,12 @@ class Display {
     }
     printValues(){
         this.displayActualValue.textContent = this.actualValue;
-        this.displayLastValue.textContent = `${this.lastValue}  ${this.signos[this.operatorType] || ''} `;
-        
+        this.displayLastValue.textContent = this.lastValue
     }
-  
+    computar(tipo){
+        this.operatorType
+
+    }
     calc(){
         const lastValue  = parseFloat(this.lastValue);
         const actualValue = parseFloat(this.actualValue);

@@ -45,8 +45,7 @@ class Display {
     }
     printValues(){
         this.displayActualValue.textContent = this.actualValue;
-        this.displayLastValue.textContent = `${this.lastValue}  ${this.signos[this.operatorType] || ''} `;
-        
+        this.displayLastValue.textContent = `${this.lastValue}  ${this.signos(this.operatorType)}`;
     }
   
     calc(){

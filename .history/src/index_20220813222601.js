@@ -12,6 +12,7 @@ numberButtons.forEach(boton =>
     })
     );
 operatorButtons.forEach(b =>
+    console.log(b)
     b.addEventListener('click', ()=> display.computar(b.value))
     )
     

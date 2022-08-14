@@ -6,12 +6,6 @@ class Display {
         this.calculator = new Calculator();
         this.actualValue = ``;
         this.lastValue =``;
-        this.signos ={
-            sum:'+',
-            res:'-',
-            mul:'*',
-            div:'/'           
-        }
 
 
     }
@@ -45,8 +39,7 @@ class Display {
     }
     printValues(){
         this.displayActualValue.textContent = this.actualValue;
-        this.displayLastValue.textContent = `${this.lastValue}  ${this.signos[this.operatorType] || ''} `;
-        
+        this.displayLastValue.textContent = this.lastValue
     }
   
     calc(){
